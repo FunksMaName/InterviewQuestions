@@ -72,7 +72,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\InterviewQuestions\InterviewQuestions\InterviewQuestions.csproj">
+    <ProjectReference Include="..\InterviewQuestions\InterviewQuestions\InterviewQuestions.csproj">
       <Project>{D4F8EE1D-11C5-4733-847D-301C35FB223A}</Project>
       <Name>InterviewQuestions</Name>
     </ProjectReference>

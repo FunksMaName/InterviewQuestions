@@ -1,36 +1,23 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace InterviewQuestions.FrogJumps
+﻿namespace InterviewQuestions.FrogJumps
 {
+    /// <summary>
+    /// So, It looked like a Fibonacci sequence thing, I binged the Fibonacci steps and found this document
+    /// http://ms.appliedprobability.org/data/files/Articles%2033/33-1-5.pdf
+    /// And a few other links :(
+    /// Here's my c# implementation of 
+    /// </summary>
     public class FrogJumps
     {
-        private const int stepDistance = 1;
-
-        private const int jumpDistance = 2;
-
-        public static IEnumerable<IEnumerable<int>> ComputeStepsAndJumps(int totalDistance)
+        public static long ComputeTotalSteps(int totalSteps)
         {
-            var range = new List<int>();
-            for (int i = 0; i < totalDistance; i++)
+            if (totalSteps <= 0) return 0;
+
+            var values = new long[totalSteps + 1];
+            for (int i = 0; i <= totalSteps; i++)
             {
-                range.Add(i + 1);
+                values[i] = (i <= 1) ? 1 : values[i - 1] + values[i - 2];
             }
-            var permutations = GetPermutations(range, totalDistance);
-
-            return permutations;
-        }
-
-        private static IEnumerable<IEnumerable<T>> GetPermutations<T>(IEnumerable<T> list, int length)
-        {
-            if (length == 1) return list.Select(t => new T[] { t });
-
-            return GetPermutations(list, length - 1)
-                .SelectMany(t => list.Where(e => !t.Contains(e)),
-                    (t1, t2) => t1.Concat(new T[] { t2 }));
+            return values[totalSteps];
         }
     }
 }

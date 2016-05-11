@@ -1,13 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.Linq;
 // ReSharper disable PossibleMultipleEnumeration
 
 namespace InterviewQuestions.IndicesAndSum
 {
     /// <summary>
-    /// Write a function that, given a list and a target sum, returns Zero-based indeces of any two distinct elements whose sum is 
+    /// Write a function that, given a list and a target sum, returns Zero-based indices of any two distinct elements whose sum is 
     /// equal to the target sum. If there are no such elements, the function should return null.
     /// 
     /// For example:
@@ -18,7 +17,7 @@ namespace InterviewQuestions.IndicesAndSum
     /// 3, 2, (7 + 5 = 12)
     /// 4, 1, (9 + 3 = 12)
     /// </summary>
-    public class IndecesAndSum
+    public class IndicesAndSum
     {
         /// <summary>
         /// TODO: If this were to be a function that needs to be highly performant
@@ -37,6 +36,8 @@ namespace InterviewQuestions.IndicesAndSum
         /// </returns>
         public static IEnumerable<Tuple<int, int>> FindSumIndices(IEnumerable<int> elements, long targetSum)
         {
+            if (elements == null) return null;
+
             var index = 0;
             var distinctElements = elements.Distinct().ToDictionary(key => index++, value => value);
             

@@ -50,8 +50,8 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\InterviewQuestions\InterviewQuestions\InterviewQuestions.csproj">
-      <Project>{D4F8EE1D-11C5-4733-847D-301C35FB223A}</Project>
+    <ProjectReference Include="..\InterviewQuestions\InterviewQuestions\InterviewQuestions.csproj">
+      <Project>{d4f8ee1d-11c5-4733-847d-301c35fb223a}</Project>
       <Name>InterviewQuestions</Name>
     </ProjectReference>
   </ItemGroup>

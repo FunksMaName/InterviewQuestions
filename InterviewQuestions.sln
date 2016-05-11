@@ -5,7 +5,7 @@ VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterviewQuestions.Console", "InterviewQuestions.Console\InterviewQuestions.Console.csproj", "{3AA908EB-4442-4094-83A5-8A65B427F51F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterviewQuestions", "..\InterviewQuestions\InterviewQuestions\InterviewQuestions.csproj", "{D4F8EE1D-11C5-4733-847D-301C35FB223A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterviewQuestions", "InterviewQuestions\InterviewQuestions\InterviewQuestions.csproj", "{D4F8EE1D-11C5-4733-847D-301C35FB223A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterviewQuestions.Tests", "InterviewQuestions.Tests\InterviewQuestions.Tests.csproj", "{C25B544F-EFEE-44AA-A0D5-AA0D8C7CDB13}"
 EndProject
